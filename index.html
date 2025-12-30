@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gurukul Public School & Coaching Institute</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="hero">
+    <div class="overlay">
+        <h1>Gurukul Public School & Coaching Institute</h1>
+        <p>Quality Education at Minimum Fees</p>
+        <p>Classes: Nursery to 12th | CBSE Based</p>
+    </div>
+</header>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+    <a href="#about" class="nav-link">About</a>
+    <a href="#management" class="nav-link">Management</a>
+    <a href="#school" class="nav-link">School</a>
+    <a href="#coaching" class="nav-link">Coaching</a>
+    <a href="#gallery" class="nav-link">Gallery</a>
+    <a href="#contact" class="nav-link">Contact</a>
+</nav>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="section light">
+    <h2>About Our Institution</h2>
+    <p>
+        Gurukul Public School is a CBSE based educational institution providing
+        quality education from Nursery to Class 5 along with coaching facilities
+        up to Class 12, Polytechnic and basic competitive exams.
+    </p>
+    <p>
+        Our mission is to provide <strong>excellent education at minimum and affordable fees</strong>
+        so that every child can achieve success.
+    </p>
+</section>
+
+<!-- MANAGEMENT SECTION -->
+<section id="management" class="section">
+    <h2>Our Management</h2>
+    <div class="card-container">
+        <div class="card">
+            <img src="c:\Users\mausa\OneDrive\Documents\director image.jpeg" alt="Director">
+            <h3>Rajiv Kumar Mishra</h3>
+            <p>Director</p>
+        </div>
+        <div class="card">
+            <img src="c:\Users\mausa\OneDrive\Documents\principal2.jpeg" alt="Principal">
+            <h3>Rakhi Mishra</h3>
+            <p>Principal</p>
+        </div>
+    </div>
+</section>
+
+<!-- SCHOOL SECTION -->
+<section id="school" class="section light">
+    <h2>School Section (Nursery – Class 5)</h2>
+    <ul>
+        <li>CBSE Curriculum</li>
+        <li>Concept Based Learning</li>
+        <li>Experienced Teachers</li>
+        <li>Safe & Friendly Environment</li>
+    </ul>
+</section>
+
+<!-- COACHING SECTION -->
+<section id="coaching" class="section">
+    <h2>Coaching Section (Class 6 – 12)</h2>
+    <ul>
+        <li>Board Exam Preparation</li>
+        <li>Polytechnic Coaching</li>
+        <li>Basic Competitive Exams</li>
+        <li>Guaranteed Good Board Results</li>
+    </ul>
+</section>
+
+<!-- GALLERY SECTION -->
+<section id="gallery" class="section light">
+    <h2>Gallery</h2>
+    <div class="gallery">
+        <img src="c:\Users\mausa\OneDrive\Documents\poster.jpeg" alt="School Poster">
+        <img src="c:\Users\mausa\OneDrive\Documents\student3.jpeg" alt="Students">
+        <img src="c:\Users\mausa\OneDrive\Documents\student3.jpeg" alt="Students 2">
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>
+        <strong>Address:</strong> Behind Canera Bank, Kachor <br>
+        <strong>Phone:</strong> 9006586881 <br>
+        <strong>Email:</strong> ayuxmishra@gmail.com
+    </p>
+
+    <h3>Online Inquiry</h3>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="text" placeholder="Class">
+        <textarea placeholder="Message" rows="5"></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2025 Gurukul Public School & Coaching Institute. All Rights Reserved.</p>
+</footer>
+
+<!-- JAVASCRIPT FOR NAVIGATION -->
+<script>
+  // Hide all sections except the first one
+  document.addEventListener('DOMContentLoaded', function() {
+    const sections = document.querySelectorAll('.section');
+    sections.forEach((section, index) => {
+      section.style.display = index === 0 ? 'block' : 'none';
+    });
+  });
+
+  // Handle navigation clicks
+  const navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      // Hide all sections
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => {
+        section.style.display = 'none';
+      });
+      
+      // Show the target section
+      const targetId = this.getAttribute('href').substring(1);
+      const targetSection = document.getElementById(targetId);
+      if (targetSection) {
+        targetSection.style.display = 'block';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
